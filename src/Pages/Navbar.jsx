@@ -3,7 +3,7 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
-import logo from '../assets/logo150px.png';
+import logo from '../assets/bluevslogo.svg';
 import { Link, useLocation } from 'react-router-dom';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -83,10 +83,9 @@ const Navbar = (props) => {
                     backgroundImage: 'none',
                     width: '100%',
                     ...props.sx,
-                    px:0,
                 }}
             >
-                <Toolbar sx={{ width: '100%', margin: 0, px: 0 }}>
+                <Toolbar sx={{py:1}}>
                     <Button
                         color="inherit"
                         component={Link}
