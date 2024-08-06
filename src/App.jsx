@@ -20,6 +20,7 @@ const App = () => {
             }}>
 
                 <Container
+                    disableGutters
                     maxWidth={"xl"}
                     sx={{
                         position: 'relative',
@@ -28,7 +29,7 @@ const App = () => {
                         backgroundPosition: 'center', // Ensure the image is centered
                         boxShadow: '0 0 30px rgba(0, 0, 0, 0.8)', // Heavy shadow effect
                         borderRadius: 0,
-                        padding: 2,
+                        padding: 0,
                         minHeight: '200vh',
                         display: 'flex',
                         flexDirection: 'column',
