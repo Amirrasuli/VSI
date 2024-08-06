@@ -5,7 +5,7 @@ import AppRoutes from './Routes';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Footer from './Pages/Footer';
-import Background from './assets/background.svg'
+import Background from './assets/background.svg';
 
 const App = () => {
     return (
@@ -16,8 +16,8 @@ const App = () => {
                 alignItems: 'center',
                 minHeight: '200vh',
                 padding: 0,
+                bgcolor: 'black',
             }}>
-
                 <Container
                     disableGutters
                     maxWidth={"xl"}
@@ -26,14 +26,14 @@ const App = () => {
                         position: 'relative',
                         backgroundImage: `url(${Background})`,
                         backgroundSize: 'cover',
-                        backgroundPosition: 'center', // Ensure the image is centered
-                        boxShadow: '0 0 30px rgba(0, 0, 0, 0.8)', // Heavy shadow effect
+                        backgroundPosition: 'center',
+                        boxShadow: '0 0 30px rgba(0, 0, 0, 0.8)',
                         borderRadius: 0,
                         padding: 0,
                         minHeight: '200vh',
                         display: 'flex',
                         flexDirection: 'column',
-                        overflow: 'hidden', // Ensure content doesn't overflow
+                        overflow: 'hidden',
                         '&::before': {
                             content: '""',
                             position: 'absolute',
@@ -41,12 +41,12 @@ const App = () => {
                             left: 0,
                             width: '100%',
                             height: '100%',
-                            background: 'linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0) 100%)', // Black starts at top, fades from middle to bottom
-                            zIndex: 1, // Position overlay above background image
+                            background: 'rgba(0, 0, 0, 0.9)',
+                            zIndex: 1,
                         },
                         '& > *': {
                             position: 'relative',
-                            zIndex: 2, // Ensure content is above the overlay
+                            zIndex: 2,
                         },
                     }}
                 >
@@ -54,16 +54,14 @@ const App = () => {
                     <Box sx={{
                         flex: 2,
                         mb: 10,
-                        width: '100%', // Ensure full width
-                        maxWidth: '100%', // Ensure no max-width restrictions
-                        padding: 0, // Optional: Remove padding if it affects width
-                        margin: 0, // Optional: Remove margin if it affects width
-                        boxSizing: 'border-box', // Include padding and border in the width
+                        width: '100%',
+                        maxWidth: '100%',
+                        padding: 0,
+                        margin: 0,
+                        boxSizing: 'border-box',
                     }}>
                         <AppRoutes />
-
                     </Box>
-                    <Footer />
                 </Container>
             </Box>
         </Router>
