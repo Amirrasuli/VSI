@@ -3,18 +3,49 @@ import { Box, Container, Typography } from '@mui/material';
 import ProductBox from '../components/ProductBox.jsx';
 import NewsBox from '../components/NewsBox';
 import SideBox from '../components/sideBox';
+import SideBox2 from '../components/sideBox2';
+
 const Home = () => {
     return (
-        <Box sx={{ minheight: '100vh', display: 'flex', flexDirection: 'column' }}>
-                <SideBox/>
+        <Box
+            sx={{
+
+                display: 'flex',
+                flexDirection: 'column',
+            }}
+        >
+            <Box
+                display="flex"
+                justifyContent="space-between"
+                sx={{ flex: 1,
+                    background: 'rgba(0, 0, 0, 1)',
+                }}
+            >
+            <ProductBox />
+            </Box>
+
 
             <Box
                 display="flex"
                 justifyContent="space-between"
-                sx={{ flex: 1 }}
+                sx={{ flex: 1,
+                    mt: 10,
+                    background: 'rgba(0, 0, 0, 1)',
+                }}
             >
-                <ProductBox />
+                <SideBox />
+            </Box>
 
+
+            <Box
+                display="flex"
+                justifyContent="space-between"
+                sx={{ flex: 1,
+                    mt: 10,
+                    background: 'rgba(0, 0, 0, 1)',
+                }}
+            >
+                <SideBox2 />
             </Box>
 
             <Box

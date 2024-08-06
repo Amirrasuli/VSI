@@ -15,7 +15,6 @@ const App = () => {
                 justifyContent: 'center',
                 alignItems: 'center',
                 minHeight: '200vh',
-                backgroundColor: '#f0f0f0',
                 padding: 0,
             }}>
 
@@ -23,6 +22,7 @@ const App = () => {
                     disableGutters
                     maxWidth={"xl"}
                     sx={{
+                        width: '110%',
                         position: 'relative',
                         backgroundImage: `url(${Background})`,
                         backgroundSize: 'cover',
@@ -51,7 +51,15 @@ const App = () => {
                     }}
                 >
                     <Navbar />
-                    <Box sx={{ flex: 1,mb:10}}>
+                    <Box sx={{
+                        flex: 2,
+                        mb: 10,
+                        width: '100%', // Ensure full width
+                        maxWidth: '100%', // Ensure no max-width restrictions
+                        padding: 0, // Optional: Remove padding if it affects width
+                        margin: 0, // Optional: Remove margin if it affects width
+                        boxSizing: 'border-box', // Include padding and border in the width
+                    }}>
                         <AppRoutes />
 
                     </Box>
