@@ -48,7 +48,7 @@ const NewsBox = () => {
                                 minHeight: 600,
                                 background: 'linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(14, 120, 191, 0.5) 100%)',
                                 borderRadius: '20px',
-                                border: '3px solid rgba(7, 0, 255, 0.6)',
+                                border: '3px solid rgba(7, 0, 255, 0.6  )',
                                 boxShadow: '0px 2px 20px 5px rgba(7, 0, 255, 0.3)',
                             }}
                         >

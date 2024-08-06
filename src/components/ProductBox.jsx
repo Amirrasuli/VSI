@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Container, Typography, Button, Grid } from '@mui/material';
 import picture from '/src/assets/firstpic.svg';
 
-const ProductBox = () => {
+const ProductBaox = () => {
     return (
         <Box sx={{ mt: 12, height: '400px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
             <Grid container spacing={2} sx={{ height: '100%' }}>
