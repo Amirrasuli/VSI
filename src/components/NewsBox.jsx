@@ -33,12 +33,13 @@ const NewsBox = () => {
                             flex: '1 1 30%',
                             minWidth: 200,
                             minHeight: 325,
-                            backgroundColor: '#0303FF05',
+                            background: 'linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(14, 120, 191, 0.5) 100%)',
                             borderRadius: '15px',
                             border: '2px solid rgba(7, 0, 255, 0.5)',
-                            boxShadow: '0px 0px 20px rgba(7, 0, 255, 0.5)',
+                            boxShadow: '0px 2px 20px 5px rgba(7, 0, 255, 0.3)',
                         }}
                     >
+
                         <CardContent
                             sx={{
                                 mt: 3,

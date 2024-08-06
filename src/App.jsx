@@ -5,6 +5,7 @@ import AppRoutes from './Routes';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Footer from './Pages/Footer';
+import Background from './assets/background.svg'
 
 const App = () => {
     return (
@@ -21,13 +22,31 @@ const App = () => {
                 <Container
                     maxWidth={"xl"}
                     sx={{
-                        background: 'linear-gradient(135deg, #14517B 0%, #0F3E64 5%, #0A2647 20%, #040E2B 30%, #01011B 40%, #01011B 100%)',
-                        boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
+                        position: 'relative',
+                        backgroundImage: `url(${Background})`,
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center', // Ensure the image is centered
+                        boxShadow: '0 0 30px rgba(0, 0, 0, 0.8)', // Heavy shadow effect
                         borderRadius: 0,
                         padding: 2,
                         minHeight: '200vh',
                         display: 'flex',
                         flexDirection: 'column',
+                        overflow: 'hidden', // Ensure content doesn't overflow
+                        '&::before': {
+                            content: '""',
+                            position: 'absolute',
+                            top: 0,
+                            left: 0,
+                            width: '100%',
+                            height: '100%',
+                            background: 'linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0) 100%)', // Black starts at top, fades from middle to bottom
+                            zIndex: 1, // Position overlay above background image
+                        },
+                        '& > *': {
+                            position: 'relative',
+                            zIndex: 2, // Ensure content is above the overlay
+                        },
                     }}
                 >
                     <Navbar />
