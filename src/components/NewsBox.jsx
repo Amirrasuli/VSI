@@ -1,100 +1,102 @@
 import React from 'react';
-import { Box, Typography, Card, CardContent, Button, Container } from '@mui/material';
+import { Box, Typography, Card, CardContent, Button, Container, Grid } from '@mui/material';
 import { Link } from 'react-router-dom';
+
+const newsItems = [
+    {
+        id: '1',
+        title: 'Title of news 1',
+        description: 'Short description 1',
+    },
+    {
+        id: '2',
+        title: 'Title of news 2',
+        description: 'Short description 2',
+    },
+    {
+        id: '3',
+        title: 'Title of news 3',
+        description: 'Short description 3',
+    },
+];
 
 const NewsBox = () => {
     return (
-        <Container sx={{ py: 4, maxWidth: '1000px', mt: 6 }}>
-            <Box sx={{ borderBottom: '2px solid rgba(7, 0, 255, 0.3)', mb: 4, maxWidth: '900px', mx: 'auto' }} />
-            <Box display="flex" justifyContent="space-between" alignItems="center" mb={2} sx={{ mt: 6 }}>
-                <Typography variant="h5" color="white" sx={{ ml: 7, fontSize: '1.5rem', fontFamily: 'Sen, sans-serif', fontWeight: 100 }}>
+        <Container sx={{ py: 4, mt: 0 }}>
+            <Box display="flex" justifyContent="space-between" alignItems="center" mb={2}>
+                <Typography variant="h5" color="white" sx={{ fontFamily: 'Sen, sans-serif' }}>
                     News
                 </Typography>
                 <Button
                     component={Link}
                     to="/news"
                     sx={{
-                        mr: 6,
                         color: 'white',
                         textTransform: 'none',
-                        fontSize: '1.5rem',
                         fontFamily: 'Sen, sans-serif',
-                        fontWeight: 100,
                     }}
                 >
                     more &gt;
                 </Button>
             </Box>
-            <Box display="flex" justifyContent="space-between" sx={{ flexWrap: 'wrap', gap: 5, maxWidth: '850px', mx: 'auto' }}>
-                {['1', '2', '3'].map((id) => (
-                    <Card
-                        key={id}
-                        sx={{
-                            flex: '1 1 30%',
-                            minWidth: 200,
-                            minHeight: 325,
-                            background: 'linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(14, 120, 191, 0.5) 100%)',
-                            borderRadius: '15px',
-                            border: '2px solid rgba(7, 0, 255, 0.5)',
-                            boxShadow: '0px 2px 20px 5px rgba(7, 0, 255, 0.3)',
-                        }}
-                    >
-
-                        <CardContent
+            <Grid container spacing={25}>
+                {newsItems.map((item) => (
+                    <Grid item xs={12} sm={6} md={4} key={item.id}>
+                        <Card
                             sx={{
-                                mt: 3,
-                                display: 'flex',
-                                flexDirection: 'column',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                                textAlign: 'center',
-                                height: '100%',
+                                minWidth: 400,
+                                minHeight: 600,
+                                background: 'linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(14, 120, 191, 0.5) 100%)',
+                                borderRadius: '20px',
+                                border: '3px solid rgba(7, 0, 255, 0.6)',
+                                boxShadow: '0px 2px 20px 5px rgba(7, 0, 255, 0.3)',
                             }}
                         >
-                            <Typography
-                                variant="h6"
+                            <CardContent
                                 sx={{
-                                    color: '#00A6FF',
-                                    mb: 1,
-                                    fontSize: '2rem',
-                                    fontFamily: 'Sen, sans-serif',
-                                    fontWeight: 100,
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    alignItems: 'center',
+                                    textAlign: 'center',
+                                    height: '100%',
                                 }}
                             >
-                                Title of news
-                            </Typography>
-                            <Typography variant="body2" sx={{
-                                color: 'rgba(255, 255, 255, 0.7)',
-                                mb: 2,
-                                fontSize: '1rem',
-                                fontFamily: 'Sen, sans-serif',
-                            }}>
-                                Short description
-                            </Typography>
-                            <Button
-                                variant="contained"
-                                sx={{
-                                    mt: 4,
-                                    backgroundColor: '#2D62F6',
-                                    color: '#fff',
-                                    borderRadius: '10px',
-                                    padding: '10px 65px',
-                                    fontFamily: 'Sen, sans-serif',
-                                    textTransform: 'none',
-                                    fontSize: '1.25rem',
-                                    '&:hover': {
-                                        backgroundColor: '#2350C8',
-                                    },
-                                }}
-                                component={Link}
-                                to={`/news/${id}`}
-                            >
-                                more
-                            </Button>
-                        </CardContent>
-                    </Card>
+                                <Typography
+                                    variant="h6"
+                                    sx={{ color: '#00A6FF', mb: 1, fontFamily: 'Sen, sans-serif' }}
+                                >
+                                    {item.title}
+                                </Typography>
+                                <Typography
+                                    variant="body2"
+                                    sx={{ color: 'rgba(255, 255, 255, 0.7)', mb: 2, fontFamily: 'Sen, sans-serif' }}
+                                >
+                                    {item.description}
+                                </Typography>
+                                <Button
+                                    variant="contained"
+                                    sx={{
+                                        mt: 'auto',
+                                        backgroundColor: '#2D62F6',
+                                        color: '#fff',
+                                        borderRadius: '10px',
+                                        padding: '10px 65px',
+                                        fontFamily: 'Sen, sans-serif',
+                                        textTransform: 'none',
+                                        '&:hover': {
+                                            backgroundColor: '#2350C8',
+                                        },
+                                    }}
+                                    component={Link}
+                                    to={`/news/${item.id}`}
+                                >
+                                    more
+                                </Button>
+                            </CardContent>
+                        </Card>
+                    </Grid>
                 ))}
-            </Box>
+            </Grid>
         </Container>
     );
 };
