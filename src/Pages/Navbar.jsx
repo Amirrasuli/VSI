@@ -40,7 +40,7 @@ const commonButtonStyles = {
     position: 'relative',
     transition: 'none',
     boxShadow: 'none',
-    typography: 'button', // استفاده از تنظیمات فونت دکمه‌ها از تم
+    typography: 'button',
     '&:hover': {
         backgroundColor: 'transparent',
     },
@@ -75,26 +75,25 @@ const Navbar = (props) => {
 
     return (
         <ThemeProvider theme={theme}>
-            <CssBaseline />
             <AppBar
                 position="static"
                 sx={{
                     boxShadow: 0,
-                    bgcolor: 'transparent',
+                    bgcolor: '#1D1D1D',
                     backgroundImage: 'none',
-                    mt: 0,
                     width: '100%',
                     ...props.sx,
+                    px:0,
                 }}
             >
-                <Toolbar>
+                <Toolbar sx={{ width: '100%', margin: 0, px: 0 }}>
                     <Button
                         color="inherit"
                         component={Link}
                         to="/"
                         sx={{
-                            ml: 3,
-                            mr: 3,
+                            ml: 0,
+                            mr: 0,
                             display: 'flex',
                             alignItems: 'center',
                             fontSize: '18px',
