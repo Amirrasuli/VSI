@@ -8,13 +8,14 @@ const ProductBox = () => {
             display="flex"
             justifyContent="space-between"
             alignItems="center"
-            sx={{ mt: 12 }}
+            sx={{ mt: 12,
+                height: '400px'}}
         >
-            <Container maxWidth="xl" sx={{ mr: 20, mb: 5, width: '100%', padding: 0}}>
-                <Typography variant="h6" color="white" sx={{ mt: 2, fontSize: '1.75rem' }}>
+            <Container maxWidth="xl" sx={{ ml: 10, mb: 20, width: '100%', padding: 0}}>
+                <Typography variant="h6" color="white" sx={{ mt: 2, fontSize: '1.5rem', fontFamily: 'Lato' }}>
                     Vitruvian shield
                 </Typography>
-                <Typography variant="body1" color="white" sx={{ mt: 1, fontSize: '1.5rem', fontFamily: 'Sen, sans-serif' }}>
+                <Typography variant="body1" color="white" sx={{ mt: 1.5, width: '120%', fontSize: '1rem', fontFamily: 'Sen, sans-serif' }}>
                     Lorem ipsum dolor sit Mauris tincidunt Lorem ipsum dolor sit amet consectetur. Mauris tincidunt euismod tincidunt nibh. Aenean lectus cras libero.
                 </Typography>
                 <Box sx={{ mt: 2, display: 'flex', gap: 2 }}>
@@ -38,7 +39,7 @@ const ProductBox = () => {
                     </Button>
                 </Box>
             </Container>
-            <Container maxWidth="md" sx={{ width: '100%', ml: 4 }}>
+            <Container maxWidth="xl" sx={{ width: '130%' }}>
                 <img src={picture} alt="Sample" style={{ width: '100%' }} />
             </Container>
         </Box>

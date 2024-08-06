@@ -19,6 +19,7 @@ const Home = () => {
                 justifyContent="space-between"
                 sx={{ flex: 1,
                     background: 'rgba(0, 0, 0, 1)',
+                    height: '800px'
                 }}
             >
             <ProductBox />
