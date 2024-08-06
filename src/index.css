@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #14517B 0px, #01011B 500px, #01011B 100%);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+}
+
+footer {
+    /* اضافه کردن استایل برای فوتر در صورت نیاز */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 50px;
+}
+
+main {
+    padding-top: 10vh; /* افزودن فاصله به اندازه هدر برای جلوگیری از قرارگیری محتوای اصلی زیر هدر */
+    flex-grow: 1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
