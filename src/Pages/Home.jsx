@@ -4,6 +4,7 @@ import ProductBox from '../components/ProductBox';
 import NewsBox from '../components/NewsBox';
 import SideBox from '../components/sideBox';
 import SideBox2 from '../components/sideBox2';
+import LearningBox from "../components/LearningBox.jsx";
 
 const Home = () => {
     return (
@@ -13,13 +14,15 @@ const Home = () => {
                 display: 'flex',
                 flexDirection: 'column',
             }}
+
         >
             <Box
                 display="flex"
                 justifyContent="space-between"
                 sx={{ flex: 1,
                     background: 'rgba(0, 0, 0, 0.7)',
-                    height: '700px'
+                    height: '700px',
+
                 }}
             >
             <ProductBox />
@@ -30,7 +33,7 @@ const Home = () => {
                 display="flex"
                 justifyContent="space-between"
                 sx={{ flex: 1,
-                    mt: 10,
+                    mt: 18,
                     background: 'rgba(0, 0, 0, 0.7)',
                 }}
             >
@@ -41,12 +44,12 @@ const Home = () => {
             <Box
                 display="flex"
                 justifyContent="space-between"
-                sx={{ flex: 1,
-                    mt: 10,
+                sx={{ flex: 2,
+                    mt: 20,
                     background: 'rgba(0, 0, 0, 0.7)',
                 }}
             >
-                <ProductBox />
+                <LearningBox />
             </Box>
 
             <Box

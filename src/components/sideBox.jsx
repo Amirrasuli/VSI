@@ -7,7 +7,11 @@ import {Link} from "react-router-dom";
 
 const SideBox = () => {
     return (
-        <Container id="features" sx={{py: {xs: 2, sm: 2}, px: {xs: 2, sm: 8}}}>
+        <Container id="features" sx={{
+            py: {xs: 2, sm: 2},
+            px: {xs: 2, sm: 8},
+            height: { xs: 'auto', sm: '66.66vh' }
+        }}>
             <Grid container spacing={14}>
                 <Grid item md={5} sx={{mt: 10, ml:7 }}>
 
