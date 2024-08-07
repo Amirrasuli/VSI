@@ -12,7 +12,6 @@ const theme = createTheme({
             color: "#F1F1F1",
         },
         h3: {
-            fontFamily: 'Lato, sans-serif',
             fontWeight: 600,
             fontSize: '23px',
             lineHeight: '23px',
@@ -30,7 +29,7 @@ const newsItems = [
 const NewsBox = () => {
     return (
         <ThemeProvider theme={theme}>
-            <Container sx={{ py: 4, mt: 0 }}>
+            <Container maxWidth="lg" sx={{ py: 4, mt: 0 }}>
                 <Box display="flex" justifyContent="space-between" alignItems="center" mb={2}>
                     <Typography variant="h3">News</Typography>
                     <Typography variant="h3"
@@ -40,8 +39,8 @@ const NewsBox = () => {
                         more &gt;
                     </Typography>
                 </Box>
-                <Container maxWidth="xl" sx={{ mt: 6 }}>
-                    <Grid container spacing={4}>
+                <Container maxWidth="xl" sx={{ mt: 6}}>
+                    <Grid container spacing={5}>
                         {newsItems.map((item) => (
                             <Grid item xs={12} sm={6} md={4} key={item.id}>
                                 <Card
