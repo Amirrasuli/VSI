@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Container, Typography } from '@mui/material';
-import ProductBox from '../components/ProductBox.jsx';
+import ProductBox from '../components/ProductBox';
 import NewsBox from '../components/NewsBox';
 import SideBox from '../components/sideBox';
 import SideBox2 from '../components/sideBox2';
