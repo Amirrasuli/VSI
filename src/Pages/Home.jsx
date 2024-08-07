@@ -18,8 +18,8 @@ const Home = () => {
                 display="flex"
                 justifyContent="space-between"
                 sx={{ flex: 1,
-                    background: 'rgba(0, 0, 0, 1)',
-                    height: '800px'
+                    background: 'rgba(0, 0, 0, 0.7)',
+                    height: '700px'
                 }}
             >
             <ProductBox />
@@ -31,7 +31,7 @@ const Home = () => {
                 justifyContent="space-between"
                 sx={{ flex: 1,
                     mt: 10,
-                    background: 'rgba(0, 0, 0, 1)',
+                    background: 'rgba(0, 0, 0, 0.7)',
                 }}
             >
                 <SideBox />
@@ -43,10 +43,10 @@ const Home = () => {
                 justifyContent="space-between"
                 sx={{ flex: 1,
                     mt: 10,
-                    background: 'rgba(0, 0, 0, 1)',
+                    background: 'rgba(0, 0, 0, 0.7)',
                 }}
             >
-                <SideBox2 />
+                <ProductBox />
             </Box>
 
             <Box
